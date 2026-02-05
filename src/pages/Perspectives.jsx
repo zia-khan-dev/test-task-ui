@@ -58,15 +58,16 @@ export default function Perspectives() {
         ))}
       </div>
 
+      <div className="flex p-1 gap-0.5 rounded-[10px] bg-background-light w-fit">
+        <button type="button" onClick={() => setActiveTab('overview')} className={tabBtnClass(activeTab === 'overview')}>
+          Overview
+        </button>
+        <button type="button" onClick={() => setActiveTab('evidence')} className={tabBtnClass(activeTab === 'evidence')}>
+          Evidence
+        </button>
+      </div>
+
       <div className="bg-white rounded-[10px] border border-border-color p-6">
-        <div className="flex p-1 gap-0.5 rounded-[10px] bg-background-light w-fit mb-6">
-          <button type="button" onClick={() => setActiveTab('overview')} className={tabBtnClass(activeTab === 'overview')}>
-            Overview
-          </button>
-          <button type="button" onClick={() => setActiveTab('evidence')} className={tabBtnClass(activeTab === 'evidence')}>
-            Evidence
-          </button>
-        </div>
         {activeTab === 'overview' && (
         <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-x-4 gap-y-4">
           {OVERVIEW_SECTIONS.map(({ key, label }) => {

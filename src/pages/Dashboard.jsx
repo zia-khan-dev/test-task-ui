@@ -21,9 +21,6 @@ export default function Dashboard() {
 
   return (
     <div className="space-y-8">
-      <div>
-        <h1 className="text-[16px] font-bold text-primary mb-2 font-cairo capitalize leading-[16px]">Dashboard</h1>
-      </div>
 
       <ProjectTimeline items={timeline} />
 

@@ -13,6 +13,7 @@ import fileSecurityIcon from '../assets/icons/fileSecurity.svg';
 import searchIcon from '../assets/icons/search.svg';
 import arrowLeftIcon from '../assets/icons/arrowLeft.svg';
 import notificationIcon from '../assets/icons/notification.svg';
+import personIcon from '../assets/icons/person.svg';
 
 export const icons = {
   home: homeIcon,
@@ -30,6 +31,7 @@ export const icons = {
   search: searchIcon,
   arrowLeft: arrowLeftIcon,
   notification: notificationIcon,
+  person: personIcon,
 };
 
 export function Icon({ src, alt = '', className = '', size = 16, color }) {
@@ -57,21 +59,39 @@ export function Icon({ src, alt = '', className = '', size = 16, color }) {
 
 export function CaretDownIcon({ className = '', size = 12 }) {
   return (
-    <svg 
-      width={size} 
-      height={size} 
-      viewBox="0 0 12 12" 
-      fill="none" 
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 12 12"
+      fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      <path 
-        d="M3 4.5L6 7.5L9 4.5" 
-        stroke="currentColor" 
-        strokeWidth="1.5" 
-        strokeLinecap="round" 
+      <path
+        d="M3 4.5L6 7.5L9 4.5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
         strokeLinejoin="round"
       />
+    </svg>
+  );
+}
+
+export function ChevronSortIcon({ className = '' }) {
+  return (
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className={`inline-block text-secondary ${className}`} aria-hidden>
+      <path d="M3 4.5L6 2.5L9 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M3 7.5L6 9.5L9 7.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function SendIcon({ className = '', size = 16 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden>
+      <path d="M22 2L11 13" />
+      <path d="M22 2L15 22L11 13L2 9L22 2Z" />
     </svg>
   );
 }
